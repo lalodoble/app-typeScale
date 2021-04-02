@@ -32,8 +32,62 @@ export default function Home() {
 						<a href="/" className="logo"><img src={logo} alt="Diseñamela.com" /></a>
 					</header>
 
-					<label htmlFor="" className="font-bold text-gray-600 block mb-1">Base Size</label>
-					<input type="text" className="w-full rounded-lg border border-gray-500 border-opacity-10 bg-gray-100 p-2" />
+					<div className="row">
+						<div className="col-auto">
+							<label htmlFor="">Base Size</label>
+							<input type="number" step={1} value={15} className="text-center" style={{width: '5rem'}}/>
+						</div>
+						<div className="col-auto">
+							<label htmlFor="">Scale</label>
+							<select>
+								<option value="">Px</option>
+								<option value="">Pt</option>
+							</select>
+						</div>
+					</div>
+
+					<div className="row">
+						<div className="col">
+							<label htmlFor="">Font Family</label>
+							<select>
+								<option value="">Montserrat</option>
+								<option value="">Arial</option>
+								<option value="" selected>Open Sans</option>
+								<option value="">Roboto</option>
+								<option value="">Times New Roman</option>
+								<option value="">Comic Sans</option>
+							</select>
+						</div>
+						<div className="col-4">
+							<label htmlFor="">Weight</label>
+							<select>
+								<option value="">100</option>
+								<option value="">200</option>
+								<option value="" selected>300</option>
+								<option value="">400</option>
+								<option value="">500</option>
+								<option value="">600</option>
+							</select>
+						</div>
+					</div>
+
+					<label htmlFor="">Ratio</label>
+					<select>
+						<option value="1.067">1.067 – Minor Second</option>
+						<option value="1.125">1.125 – Major Second</option>
+						<option value="1.200">1.200 – Minor Third</option>
+						<option value="1.250">1.250 – Major Third</option>
+						<option value="1.333">1.333 – Perfect Fourth</option>
+						<option value="1.414">1.414 – Augmented Fourth</option>
+						<option value="1.500">1.500 – Perfect Fifth</option>
+						<option value="1.618">1.618 – Golden Ratio</option>
+					</select>
+
+					<label htmlFor="">Preview Text</label>
+					<input type="text" value={'Lorem ipsum door sit ammet'} />
+
+
+
 				</SideBar>
 
 
@@ -44,7 +98,7 @@ export default function Home() {
 
 export function SideBar(props) {
 	return (
-		<div className="sideBar p-4 shadow-lg">
+		<div className="sideBar px-5 p-4 shadow-lg">
 			{props.children}
 		</div>
 	)
