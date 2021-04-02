@@ -1,8 +1,9 @@
-header {
-    background: #fff;
-    @apply shadow;
-    @apply py-2;
+body {
+    @apply bg-main-50;
+}
 
+header {
+    
     .logo {
         height: 3rem;
         display: inline-block;
@@ -15,8 +16,20 @@ header {
 
 main {
     min-height: 100vh;
-    @apply bg-main-50;
 }
+
+.mainLayout {
+    .sideBar {
+        background: #fff;
+        @apply py-2;
+        position: fixed;
+        left: 0;
+        height: 100vh;
+        width: 20rem;
+    }
+}
+
+
 
 h1 {
     font-family: "Poppins";

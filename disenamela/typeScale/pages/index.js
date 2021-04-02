@@ -6,7 +6,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Diseñamela</title>
+				<title>Diseñamela Typo</title>
 				<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png" />
 				<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png" />
 				<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png" />
@@ -26,37 +26,26 @@ export default function Home() {
 				<meta name="theme-color" content="#ffffff" />
 			</Head>
 
-			<main>
-				<header>
-					<div className="container-fluid">
+			<main className="mainLayout">
+				<SideBar>
+					<header className="border-b pb-2 mb-4">
 						<a href="/" className="logo"><img src={logo} alt="Diseñamela.com" /></a>
-					</div>
-				</header>
+					</header>
 
-				<div className="container-md py-8">
-					<h1 className="mb-4">Hola mundo!</h1>
-					<p>Somos 2 amigos, diseñadores, con una pasión enorme por nuestra profesión. Allá por 2019 empezamos con este proyecto, cuando no tuvimos mejor idea que ponernos a armar pequeñas aplicaciones que nos ayuden a nosotros y a otros diseñadores. <code>Diseñamela</code> nace para eso: queremos optimizar ciertas tareas que a veces pueden resultar un tanto aburridas o complejas de replicar una y otra vez con cada proyecto.</p>
-					<p>A continuación las funciones hasta ahora disponibles:</p>
-				</div>
+					<label htmlFor="" className="font-bold text-gray-600 block mb-1">Base Size</label>
+					<input type="text" className="w-full rounded-lg border border-gray-500 border-opacity-10 bg-gray-100 p-2" />
+				</SideBar>
 
-				<div className="container">
-					<ul className="appList">
-						<li key="grilla">
-							<a href="https://grilla.diseñamela.com" target="_blank">
-								<img src='/AppGrilla.svg' alt="Grilla" />
-								<h3>Grilla</h3>
-							</a>
-						</li>
 
-						<li key="grilla" className="comingSoon">
-							<a href="#">
-								<img src='/AppType.svg' alt="Grilla" />
-								<h3>Type Scale</h3>
-							</a>
-						</li>
-					</ul>
-				</div>
 			</main>
 		</>
+	)
+}
+
+export function SideBar(props) {
+	return (
+		<div className="sideBar p-4 shadow-lg">
+			{props.children}
+		</div>
 	)
 }
